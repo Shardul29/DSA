@@ -1,0 +1,32 @@
+package hello;
+import java.util.*;
+ class employee
+{
+	int id;
+	String name;
+
+public void printDetails() {
+	System.out.println("hello my id is "+id);
+	System.out.println("and my name is "+name);
+}	
+}
+
+public class custom {
+	public static void main(String [] args) {
+		employee harry=new employee();
+		employee  shar=new employee();
+		harry.id=12;
+		shar.id=9;
+		shar.name="Shardul";
+		harry.name="Harendar";
+		harry.printDetails();
+		shar.printDetails();
+	}
+
+}
+//output 
+/*hello my id is 12
+and my name is Harendar
+hello my id is 9
+and my name is Shardul
+*/
