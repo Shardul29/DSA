@@ -1,0 +1,33 @@
+package hello;
+import java.util.*;
+
+public class abc {
+	public static List<Integer> NGS(int arr[]) {
+		int len=arr.length;
+		Stack<Integer>st=new Stack<Integer>();
+		//Stack<Pair<Character,Integer>> validStack = new Stack<>();
+		//Vector<Integer> v=new Vector<Integer>();
+		ArrayList<Integer>ans=new ArrayList<Integer>();
+		for(int i=0;i<len;i++) {
+			while(!st.empty()&&arr[st.peek()]<=arr[i]) {
+				st.pop();
+			}
+			if(st.empty()) {
+				ans.add(i+1);
+			}
+			else {
+				int top=st.peek();
+				ans.add(i-top);
+			}
+			st.push(i);
+		}
+		return ans;
+	}
+	//public class em{
+	public static void main(String [] args) {
+		      int a[]={100,80,60,70,60,75,85};
+		     // abc obj=new abc();
+		      NGS(a);
+		      System.out.println(NGS(a));
+	}
+	}
